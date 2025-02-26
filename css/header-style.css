@@ -1,0 +1,65 @@
+.header {
+	background-color: rgb(200,200,200);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	z-index: 10;
+}
+
+.logoHeader {
+	width: 8em;
+	height: 8em;
+	margin-right: 2em;
+}
+
+.middleHeader {
+	height: 8em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 27em;
+}
+
+.welcome {
+	color: #9F3378;
+	font-size: 2.3em;
+	font-weight: bold;
+	font-family: 'Poppins';
+	width: 11.6em;
+}
+
+.rightHeader {
+	border-radius: 1em;
+	margin-top: 3em;
+	padding: 0.3em 0em 0.3em 0em;
+	height: 2em;
+	margin-bottom: 2.4em;
+	background-color: #9F3378;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 11em;
+}
+
+.loginHeader {
+	margin: 0em 1em 0em 1em;
+	color: white;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 1.5em;
+}
+
+.rightHeader:hover{
+	opacity: 70% ;
+	.loginHeader {
+		opacity: 70%;
+	}
+}
+

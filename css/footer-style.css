@@ -1,0 +1,80 @@
+.footer {
+	width: 98.80%;
+	height: 4em;
+	background-color: rgb(200,200,200);
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: absolute;
+	margin-top: 50em;
+	left: 0;
+	z-index: 10;
+}
+
+.footer-content {
+	display: flex;
+	flex-direction: row;
+}
+
+.rights {
+	margin: 0.3em 2em 0em 1em;
+	font-size: 1.5em;
+	font-family: 'Montserrat';
+	font-weight: 100;
+
+}
+
+.contact {
+	margin: 0.8em 0.7em 1em 2em;
+	font-size: 1.5em;
+	font-family: 'Montserrat';
+	color: black;
+}
+
+.contact:hover {
+	text-decoration: underline;
+	text-decoration-color: #9F3367;
+}
+
+.mailimg {
+	margin-top: 1.1em;
+	width: 2em;
+	height: 2em;
+}
+
+.mailimg:hover {
+	opacity: 70%;
+}
+
+.footer-media {
+	display: flex;
+	flex-direction: row;
+}
+
+.media {
+	font-family: 'Montserrat';
+	font-size: 1.5em;
+	margin: 0.8em 0.6em 0em 1em;
+}
+
+.facebook, .instagram, .twitter {
+	display:block;
+	width: 2em;
+	height: 2em;
+	/*margin: 1.3em 0.5em 0em 0.5em;*/
+	position: relative;
+	top: 1.1em;
+	border: 2px #9F3367 solid;
+	border-radius: 25px;
+}
+
+.liens {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.instagram {
+	margin: 0em 1em 0em 1em;
+}

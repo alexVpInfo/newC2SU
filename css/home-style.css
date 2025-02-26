@@ -1,0 +1,168 @@
+main {
+	margin-top: 12.2em;
+}
+
+.intro {
+	h1 {
+		font-family: 'Poppins';
+		color: #9F3367;
+		font-weight: 600;
+		font-size: 2em;
+		text-indent: 2em;
+		display: block;
+		padding-bottom: 1em;
+		width: 16em;
+		border-bottom: solid 3px #9F3367;
+	}
+	p {
+		font-family: 'Poppins';
+		font-weight: 200;
+		font-size: 1.35em;
+		color: black;
+		text-indent: 2em;
+		display: block;
+		width: 28em;
+	}
+	img {
+		width: 22em;
+		height: 22em;
+		position: relative;
+		animation: apparition 3s ease;
+	}
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-bottom: 15em;
+}
+
+@keyframes apparition {
+	from {
+		opacity: 0%;
+		left: -60%;
+	}
+	to {
+		opacity: 100%;
+		left: 0;
+	}
+}
+
+.photoBureau {
+	width: 100%;
+	clip-path: inset(15% 0 15% 0);
+	position: absolute;
+	left: 0;
+	top: 88em;
+}
+
+.presentation {
+	display: flex;
+	flex-direction: row;
+	margin-right: 5em;
+	width: 100%;
+	margin-bottom: 10em;
+	.linkPoles {
+		width: 50%;
+		img {
+			width: 50em;
+			height: 30em;
+			z-index: 1;
+			opacity: 39%;
+			position: relative;
+			transition: opacity 500ms ease;
+			top: -10%;
+			left: -8%;
+		}
+		a {
+			position: relative;
+			top: 35%;
+			left: 33%;
+			height: 4em;
+			width: 12em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			z-index: 3;
+		}
+		margin-right: 5em;
+	}
+	.presentationTxt {
+		width: 30%;
+		h1 {
+			font-family: 'Poppins';
+			color: #9F3367;
+			font-weight: 600;
+			font-size: 2em;
+			text-indent: 2em;
+			display: block;
+			padding-bottom: 1em;
+			width: 18em;
+			border-bottom: solid 3px #9F3367;
+		}
+		p {
+			font-family: 'Poppins';
+			font-weight: 200;
+			font-size: 1.35em;
+			color: black;
+			text-indent: 2em;
+			display: block;
+			width: 28em;
+		}
+	}
+	.divPoles {
+		width: 12em;
+		background-color: #9F3367;
+		border-radius: 1.2em;
+		height: 4em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		z-index: 2;
+		transition: width 500ms ease, height 500ms ease, border-radius 500ms ease;
+		margin: auto;
+	}
+	.txtLink {
+		color: white;
+		font-family: 'Poppins';
+		font-size: 1em;
+		font-weight: 600;
+		text-decoration: none;
+		margin: auto;
+		text-indent: 0.5em;
+		display: block;
+		transition: font-size 500ms ease;
+	}
+}
+
+a:hover {
+	.divPoles{
+		width: 9em;
+		height: 3em;
+		border-radius: 0.9em;
+	}
+	.txtLink {
+		font-size: 0.75em;
+	}
+}
+
+.poles:hover ~ .logoPoles {
+	opacity: 100%;
+}
+
+
+
+.bureau {
+	h1 {
+		font-family: 'Poppins';
+		color: #9F3367;
+		font-weight: 600;
+		font-size: 2em;
+		text-indent: 1em;
+		display: block;
+		padding-bottom: 1em;
+		width: 13.4em;
+		border-bottom: solid 3px #9F3367;
+		display: block;
+		margin: auto;
+	}
+
+}

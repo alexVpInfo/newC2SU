@@ -1,0 +1,122 @@
+main {
+	display: flex;
+	justify-content: center;
+}
+
+.divIn {
+	display: flex;
+	flex-direction: row;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 4px solid grey;
+	border-radius: 9px;
+	padding: 1em 3em 1.2em 2em;
+	position: absolute;
+	top: 28%;
+	z-index: 0;
+}
+
+.titleConnexion {
+	font-family: 'Montserrat';
+	color: #9F3378;
+	padding-top: 0;
+	font-weight: bold;
+	font-size: 2em;
+	height:0em
+}
+
+.alerte {
+	font-family: 'Montserrat';
+	color: red;
+	font-size: 1.3em;
+}
+
+.label {
+	display: block;
+	width: 13.6em;
+	text-align: end;
+	font-weight: bold;
+	color: #9F3367;
+	font-family: 'Montserrat';
+}
+
+
+.divForm {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0.5em 0em 0.5em 0em;
+
+}
+
+input { 
+	transition: background-color 350ms ease;
+	transition: color 350ms ease;
+	border-radius: 7px;
+	border-width: 2px;
+	margin-left: 1em;
+}
+
+.txt {
+	margin-right: 2.2em;
+}
+
+.input:focus {
+	background-color:#9F3367;
+	color: white;
+}
+
+button {
+	margin-top: 0.7em;
+	width: 4.8em;
+	height: 2.1em;
+	font-size: 1.2em;
+	font-family: 'Montserrat';
+	font-weight: bold;
+	background-color: white;
+	color: black;
+	border: 2px #9F3367 solid;
+	border-radius: 12px;
+	transition: background-color 350ms ease;
+	transition: color 350ms ease;
+}
+
+button:hover {
+	background-color:#9F3367;
+	color: white;
+}
+
+.txtInscription {
+	font-family: 'Montserrat';
+	margin-top: 2em;
+	margin-right: 0.6em;
+	font-weight: bold;
+}
+
+main a {
+	margin-top: 2em;
+	color: #9F3367;
+	font-weight: bold;
+}
+
+.souvenir {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 1em 0em 1em 0em;
+}
+
+.inputCheckbox {
+	accent-color: #9F3367;
+	-webkit-transform: scale(2);
+}
+
+.inputCheckbox:hover {
+	filter: brightness(0.9);
+}
+
