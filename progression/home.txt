@@ -11,8 +11,9 @@ margin-bottom de 12em pour espacer avec le prochain div
 Pareil, même structure pour parler des VSS et de l'éducation: (div .lutte)
 width de 14em pour h1 et 25em pour p. Le texte est cette fois-ci sur la droite, sur la gauche deux div pour les deux idées.
 le div .lutteImg sert à mettre en forme les deux descriptions (il est en flex space-around et contient deux div: .sexes et .educ)
-Chacun de ces deux div contient des flèches "^", on les fait avec la lettre v tournée (transform: rotate(180deg) ), puis on utilise la fonction stretch de font à 400%
--> nécessité d'utiliser la police LeagueMonoVariable et d'importer en le package de cette manière:
+Les images ont un height de 12em, et un width de 12em pour l'educ et 14,5em pour sexes. on rajoute des margin latéraux pour compléter la largeur de 18em du div.
+Chacun de ces deux div contient des flèches "^", on les fait avec la lettre v tournée (transform: rotate(180deg) ), puis on utilise la fonction stretch de font à 200%
+-> nécessité d'utiliser la police LeagueMonoVariable (en sans-serif 5em) et d'importer en le package de cette manière:
 <style>
 		@font-face
 		{
@@ -21,4 +22,7 @@ Chacun de ces deux div contient des flèches "^", on les fait avec la lettre v t
 			font-style: normal;
 			font-stretch: 1% 500% /* required by chrome */
 		}
-	</style>
+</style>
+On le met alors en #9F3367, avec un margin-top de 0.5em en plus de margin: auto , une largeur (width) de 1.05em.
+On crée ensuite son animation, on commence par lui ajouter le curseur en pointer
+ensuite on crée les p qui contiennent le texte à faire apparaître, avec fon-size à 0.9em et un width de 18em
