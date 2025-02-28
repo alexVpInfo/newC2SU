@@ -1,0 +1,24 @@
+documetation commencée le 27 février, après la photo de bureau
+
+Ensuite la partie action concrètes, tout est dans le div .action Le texte (titre + paragraphe) est dans un sous-div actionTxt. margin-top de 2em avec ce qu'il y a avant
+Comme précédemment: font Poppins , h1 en 2em weight 600, p en 1.35em weight 200. la barre séparant les deux et le contour bas du titre (solid 3px #9F3367) + padding-bottom de 1em
+C2SU et les chiffres du p sont dans le span weight 600 et #9F3367 (le txt est en noir sinon)
+J'ai mis un indent de 3.7em pour le texte pour aligner les textes en span, le texte a un line-heght de 1.8em pour espacer les lignes
+le display en block, le width de 13em pour le h1 (avec padding de 2em en latéral comme à chaque fois) et 15em aussi pour le p; margin auto à chaque fois avec margin-top 1em pour l'écart
+Pour l'image à côté voir pour la changer avec une plus belle  (width 30em height 23em), border-radius à 10px pour adoucir
+margin-bottom de 12em pour espacer avec le prochain div
+
+Pareil, même structure pour parler des VSS et de l'éducation: (div .lutte)
+width de 14em pour h1 et 25em pour p. Le texte est cette fois-ci sur la droite, sur la gauche deux div pour les deux idées.
+le div .lutteImg sert à mettre en forme les deux descriptions (il est en flex space-around et contient deux div: .sexes et .educ)
+Chacun de ces deux div contient des flèches "^", on les fait avec la lettre v tournée (transform: rotate(180deg) ), puis on utilise la fonction stretch de font à 400%
+-> nécessité d'utiliser la police LeagueMonoVariable et d'importer en le package de cette manière:
+<style>
+		@font-face
+		{
+			src: url('LeagueMono-VF.ttf');
+			font-family: 'LeagueMonoVariable';
+			font-style: normal;
+			font-stretch: 1% 500% /* required by chrome */
+		}
+	</style>
