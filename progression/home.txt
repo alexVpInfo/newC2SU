@@ -10,9 +10,9 @@ margin-bottom de 12em pour espacer avec le prochain div
 
 Pareil, même structure pour parler des VSS et de l'éducation: (div .lutte)
 width de 14em pour h1 et 25em pour p. Le texte est cette fois-ci sur la droite, sur la gauche deux div pour les deux idées.
-le div .lutteImg sert à mettre en forme les deux descriptions (il est en flex space-around et contient deux div: .sexes et .educ)
-Les images ont un height de 12em, et un width de 12em pour l'educ et 14,5em pour sexes. on rajoute des margin latéraux pour compléter la largeur de 18em du div.
-Chacun de ces deux div contient des flèches "^", on les fait avec la lettre v tournée (transform: rotate(180deg) ), puis on utilise la fonction stretch de font à 200%
+le div .lutteImg sert à mettre en forme les deux descriptions (il est en flex space-around et contient deux div: .sexes et .educ avec à chaque foi height 31em et width 18em) on lui met un margin-top de 2,5em pour qu'il soit aligné avec le texte
+Les images ont un height de 12em, et un width de 12em pour l'educ et 14,5em pour sexes. pour centrer le div on le met en flex avec align-items: center.
+Chacun de ces deux div contient des flèches "^", on les fait avec la lettre v tournée (transform: rotate(180deg) ) dans un élément label, puis on utilise la fonction stretch de font à 200%
 -> nécessité d'utiliser la police LeagueMonoVariable (en sans-serif 5em) et d'importer en le package de cette manière:
 <style>
 		@font-face
@@ -23,6 +23,11 @@ Chacun de ces deux div contient des flèches "^", on les fait avec la lettre v t
 			font-stretch: 1% 500% /* required by chrome */
 		}
 </style>
-On le met alors en #9F3367, avec un margin-top de 0.5em en plus de margin: auto , une largeur (width) de 1.05em.
-On crée ensuite son animation, on commence par lui ajouter le curseur en pointer
-ensuite on crée les p qui contiennent le texte à faire apparaître, avec fon-size à 0.9em et un width de 18em
+On le met alors en #9F3367, avec un margin-top de 0.5em pour espacer, une largeur (width) de 1.05em.
+
+On crée ensuite son animation, on commence par lui ajouter le curseur en pointer (illusion de bouton)
+ensuite on crée les p qui contiennent le texte à faire apparaître, avec font-size à 0.9em et un width de 18em
+on crée un checkbox hidden pour chaque div dont le label est la flèche, ainsi quand on appuie dessus on va changer (1seconde en tout):
+-la position de la fleche (0->-12%) et on change sons sens avec transform rotate (durée de 1ms pour 999ms de retard)
+-le p avec clip-path inset (0 0 100% 0) -> (0 0 0 0) et sa position de -5% à -15%
+- l'image de 12em à em à chaque fois (width sexesImg de 14em à 6,04em)
