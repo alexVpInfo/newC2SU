@@ -25,4 +25,45 @@ on crée un checkbox hidden pour chaque div dont le label est la flèche, ainsi 
 
 
 Plus tard j'ai changé la flèche avec le code &#x276F; maintenant elle est en à 270deg en unchecked et 90deg en checked. 
-On peut donc retirer le font-stretch, et mettre une font sans-serif
+On peut donc retirer le font-stretch, et mettre une font sans-serif en 4em, on passe le margin-top à 0.8em; et le width 1.05em devient height 1.33em et le mettre en top-5% (tout pour style de label). j'ai mis le cursor en n-resize quand on passe dessus (et s-resize quand il est déjà cliqué).
+
+A la suite on va faire la partie contact sur la même structure (div général . contacter séparé en .contactTxt et .contactImg)
+Le h1 du texte a un width de 7.7em et p on le met à 19em.
+La partie Img contiendra tout en haut la mention "nos réseaux" avec en dessous de nouveau les mêmes liens que dans le footer des pages tools (en remplaçant X par le mail)
+le div contact Img est en flex column space-around align-items: center, le texte reprend les caractéristiques habituelles donc en corrige en mettant width à 15em, pas d'indent, pas de margin et text-align: center. On lui met un margin-top: 2em.
+Les images de réseaux sont en display block 4em×4em avec une bordure de 2px en #9F3367 solid et un radius très grand pour faire un cercle autour (j'ai mis 20em)
+ils sont dans un bloc a pour servir de lien avec target="blank_" pour ouvrir dans une nouvelle fenêtre
+
+Ensuite on remet un texte "Les mails du Bureau" en dessous duquel on va mettre un menu défilant avec tous les membres du bureau.
+Sa strcture est un div en row qui contient un bouton gauche, un lien et un bouton droit. Les boutons sont faits avec les flèches &#x276F; (celle de gauche est rotate(180deg)). Ces boutons ont un fond rgb(200,200,200), pas de bordures, mais border-radius: 5px (on fait '0 0.7em 0.7em 0' à droite et à gauche comme il est retourné on fait la même; de cette manière les angles internes restent droits). 
+pour la flèche on met button: font 1.5em , height 5em . Et cursor resize (e-resize à droite w-resize à gauche), en pratique j'ai d'abord défini button avec les propriétés de btnDroite, puis j'ai utilisé .btnGauche pour corriger ses spécificités. puis un button:active avec une opacité de 50%
+  Pour le a qui va contenir le reste, on le met en flex row, avec la mention target blank_ et comme id mailVP. Il contient à gauche une image (id="imgVP"), puis un div (id="infoVP") qui est en flex column space-around et contient deux lignes: on place deux em (en css on enlèvera l'italic avec text-style: normal) le premier pour les noms (id="nomVP") et un deuxième avec le pôle (id="VP"). On définit le style d'em avec font: poppins 1.5em, text-align: center, width 13.2em, color black, font-weight 600. On adapte pour le nom: .nomVP {font-size 1.8em width 11em et color #9F3367}.
+  l'image fait 7,3em×7,3em avec un margin gauche de 1em. Pour qu'elle soit ronde on met un border-radius très grand (20em).
+
+Pour permettre ensuite le changement de personne dans le block lien/mail on va écrire le script js suivant:
+let mail = document.getElementById("mailVP");
+let img = document.getElementById("imgVP");
+let nom = document.getElementById("nomVP");
+let vp = document.getElementById("VP");
+let btnGauche = document.getElementById("btnGauche");
+let btnDroite = document.getElementById("btnDroite");
+var i = 0;
+update(i);
+
+btnDroite.addEventListener("click", function() {
+	i ++;
+	if (i === 17) {
+		i = 0;
+	};
+	update(i);
+});
+
+Puis on fait un équivalent pour le btnGauche pour faire baisser i (et qui revient aux max à -1)
+La fonction update(i) va ensuite utiliser un switch avec 17 entrées pour chacun et change l'html pour:
+- mettre l'alt de l'image au nom de la personne
+- mettre la source de l'image au sous-dossier photosBureau de images, en choisissant le bon poste (avec VPwei1 et VPwei2 / VPsgs1 et VPsgs2 définis arbitrairements
+- mettre le lien du bloc a au mailto: du poste en question
+- mettre le textContent de nomVP au nom de la personne
+- mettre le textContent VP au poste pour le BR et au pôle pour les VPs
+  à la fin de chaque case du switch on met bien un break
+Pour plus de structure, j'ai mis height div.menuDefilant à 8em, le a à 7.8em (-0.2em pour chaque bordure de 0.1em), les images à 7.5em×7.5em, avec un margin-top de 0.15em pour centrer
