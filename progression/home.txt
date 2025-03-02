@@ -67,3 +67,14 @@ La fonction update(i) va ensuite utiliser un switch avec 17 entrées pour chacun
 - mettre le textContent VP au poste pour le BR et au pôle pour les VPs
   à la fin de chaque case du switch on met bien un break
 Pour plus de structure, j'ai mis height div.menuDefilant à 8em, le a à 7.8em (-0.2em pour chaque bordure de 0.1em), les images à 7.5em×7.5em, avec un margin-top de 0.15em pour centrer
+
+Pour le header, on le met en flex row space-between,
+à gauche le logo (lien qui renvoie vers l'accueil) en format 7em×7em et margin-left 5em | margin-top 1em
+à droite on met un div (.link) qui contient les liens suivants (en flex row space-around, items center, width 50% margin-top: 1em):
+- Accueuil (renvoie vers home.php) 
+-La corporation (renvoie vers corpo.php)
+-Les pôles (renvoie vers poles.php)
+-Nos sites (js qui va afficher un menu)
+Ces txt sont en Poppins black 1.3em font-weight 400. On met padding 0.5em, margin-bottom 0, cursor pointer dessus. ET text-align: center. 
+On rajoute la classe .page à la page concernée (ici Accueil).
+On mcrée un div (.under) pour chaque titre qui va servir de soulignement. Il est en height 0.15em, background #9F3367, et width 0 initialement, mais une transition le fera passer à 100% quand :hover, en 0.5s ease. On met .page +.under en width 100%
