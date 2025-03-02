@@ -78,3 +78,6 @@ Pour le header, on le met en flex row space-between,
 Ces txt sont en Poppins black 1.3em font-weight 400. On met padding 0.5em, margin-bottom 0, cursor pointer dessus. ET text-align: center. 
 On rajoute la classe .page à la page concernée (ici Accueil).
 On mcrée un div (.under) pour chaque titre qui va servir de soulignement. Il est en height 0.15em, background #9F3367, et width 0 initialement, mais une transition le fera passer à 100% quand :hover, en 0.5s ease. On met .page +.under en width 100%
+On remplace en fait pour la partie site le p par label avec l'attribut for="sites", puis on créer un input checkBox avec l'id correspondante (caché). Ainsi quand on click sur ce checkbox (nommé .sites, donc quand sites:checked), on va faire apparaître un ul caché (passe de display none à display block). 
+Donc ce ul a comme position absolute top 6em et right 1em. Il contient 6 li. Le premier est tools, que l'on met dans le span déjà établi. Les 5 autres corrspondent aux sites contenus: wei, vote, roneos, fiches et mindmaps. On lui met: font Poppins 1.5em ; list-style-type none, text-align center, padding 0.3em, background-color white, border 0.01em rgb(200,200,200) solid. Avec une transition de la couleur à white et du fond à #9F3367 en 350ms (pour color on met aussi dans span du coup)
+Et on crée li: hover en rajoutant span{color: white}.
