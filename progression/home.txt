@@ -84,4 +84,4 @@ Et on crée li: hover en rajoutant span{color: white}.
 
 Pour le footer, je mettrai les parts, et tout bas deux div:
 -un premier avec 'COPYRIGHT © TOUS DROITS RÉSERVÉS', background #9F3367, color white, font Poppins, text-align center, width 100%, padding-top et -bottom 0.3em
-- un deuxième avec 'TeamInfo - site par Alexandre FLAMENT', background black, color rgba(255,255,255,0.7) (blanc opacité 70%), font Poppins 0.7em, text-align center, width 100%, padding-top 0.2em et padding-bottom 0.4em
+- un deuxième avec 'Pôle Info - site par Alexandre FLAMENT', background black, color rgba(255,255,255,0.7) (blanc opacité 70%), font Poppins 0.7em, text-align center, width 100%, padding-top 0.2em et padding-bottom 0.4em
