@@ -91,3 +91,57 @@ Plus tard j'ai fait en sorte sue l'input soit en dehord du div .aSites (ancien .
 Pour le lien vers le mail j'ai plus tard rajouté le mail en dessous. Pour ça on passe le div .menuDefilant à height: 10em. Puis on crée un div .divMail qui contient l'image et le txt précédent (le a passe donc à flex-direction: row et height 9.8em). Ce nouveau div fait 7.8em de haut et est en flex row. En dessou de ce div on met un cite (d'id 'mailVP') qui va contenir l'adresse mail à afficher , il lui done le style font-style normal; text-decoration underline; color #9F3367; font 'Poppins' 1.5em. Enfin on rajoute pour chaque membre dans le script: let mailVP=document.getElementById("mailVP"); . Puis dans update() on passe le textContent au mail en question.
 
 Pour le logo corpo qui apparaît, on rajoute un lien vers la page corpo.php, mtn c'est donc le a qui fait l'animation et plus l'image.
+
+On remplace idées défendues par engagment, avec donc un width de 17.8em au h1 de .lutte
+
+Pour rendre la page plus responsive on met flex-wrap: wrap à .intro; wrap-reverse à .presentation; wrap à .action; wrap-reverse à .lutte; wrap à contact.
+
+Pour rendre la page plus responsive j'ai mis:
+html { font-size: clamp( 0.5em , 0.5vw + 0.5em , 1vw + 0.5 em) ; }
+Pour l'image des pôles:
+width: clamp( 35em , 50vw , 65em ) ; height: auto ;
+
+Pour les images intéractives (VSS ety éducation pour tous) on met leur height à 30%, leur width à auto. Puis pour les div qui les entourent on met width à clamp(10vw, 20vw, 30vw) et height 40em. On met ces div (.sex et .educ toujours) en position relative à top: calc(10em-8vw);
+Pour la transition, l'image finale dans les deux cas a un height de clamp(4vw,8vw,12vw) t un width auto. Mais j'ai enlevé le fait que la flèche changeait de direction d'un coup, à la place elle tourne au rythme de l'animation: 1ms 999ms devient simplement 1s.
+
+J'ai rajouté un "voir plus" en dessous des flèches des engagements. c'est en h3, color #9F3367, position relative, top -8%. Il disparait quand le toggle est checked.
+
+Pour rendre responsive à un tel:
+@media screen and (max-width: 767px) and (orientation: portrait) {
+	header { 
+		flex-direction: row-reverse;
+		justify-content: center;
+		.links {
+			width: 100%;
+			margin-left: 1em;
+		}
+	}
+	.logoHeader {
+		width: 0;
+		height: 0;
+	}
+	.intro {
+		p {
+			width: 90%;
+			padding: 2em;
+		}
+	}
+	.lutte {
+		h1 {
+			width: 60%;
+		}
+		p {
+			width: 80%;
+		}
+
+	}
+	.lutteImg {
+		div {
+			margin: 5em;
+		}
+		p {
+			position: relative;
+			right: 5em;
+		}
+	}
+}
