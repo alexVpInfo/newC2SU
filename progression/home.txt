@@ -37,11 +37,11 @@ ils sont dans un bloc a pour servir de lien avec target="blank_" pour ouvrir dan
 Ensuite on remet un texte "Les mails du Bureau" en dessous duquel on va mettre un menu défilant avec tous les membres du bureau.
 Sa strcture est un div en row qui contient un bouton gauche, un lien et un bouton droit. Les boutons sont faits avec les flèches &#x276F; (celle de gauche est rotate(180deg)). Ces boutons ont un fond rgb(200,200,200), pas de bordures, mais border-radius: 5px (on fait '0 0.7em 0.7em 0' à droite et à gauche comme il est retourné on fait la même; de cette manière les angles internes restent droits). 
 pour la flèche on met button: font 1.5em , height 5em . Et cursor resize (e-resize à droite w-resize à gauche), en pratique j'ai d'abord défini button avec les propriétés de btnDroite, puis j'ai utilisé .btnGauche pour corriger ses spécificités. puis un button:active avec une opacité de 50%
-  Pour le a qui va contenir le reste, on le met en flex row, avec la mention target blank_ et comme id mailVP. Il contient à gauche une image (id="imgVP"), puis un div (id="infoVP") qui est en flex column space-around et contient deux lignes: on place deux em (en css on enlèvera l'italic avec text-style: normal) le premier pour les noms (id="nomVP") et un deuxième avec le pôle (id="VP"). On définit le style d'em avec font: poppins 1.5em, text-align: center, width 13.2em, color black, font-weight 600. On adapte pour le nom: .nomVP {font-size 1.8em width 11em et color #9F3367}.
+  Pour le a qui va contenir le reste, on le met en flex row, avec la mention target blank_ et comme id linkMail. Il contient à gauche une image (id="imgVP"), puis un div (id="infoVP") qui est en flex column space-around et contient deux lignes: on place deux em (en css on enlèvera l'italic avec text-style: normal) le premier pour les noms (id="nomVP") et un deuxième avec le pôle (id="VP"). On définit le style d'em avec font: poppins 1.5em, text-align: center, width 13.2em, color black, font-weight 600. On adapte pour le nom: .nomVP {font-size 1.8em width 11em et color #9F3367}.
   l'image fait 7,3em×7,3em avec un margin gauche de 1em. Pour qu'elle soit ronde on met un border-radius très grand (20em).
 
 Pour permettre ensuite le changement de personne dans le block lien/mail on va écrire le script js suivant:
-let mail = document.getElementById("mailVP");
+let linkMail = document.getElementById("linkMail");
 let img = document.getElementById("imgVP");
 let nom = document.getElementById("nomVP");
 let vp = document.getElementById("VP");
@@ -85,3 +85,9 @@ Et on crée li: hover en rajoutant span{color: white}.
 Pour le footer, je mettrai les parts, et tout bas deux div:
 -un premier avec 'COPYRIGHT © TOUS DROITS RÉSERVÉS', background #9F3367, color white, font Poppins, text-align center, width 100%, padding-top et -bottom 0.3em
 - un deuxième avec 'Pôle Info - site par Alexandre FLAMENT', background black, color rgba(255,255,255,0.7) (blanc opacité 70%), font Poppins 0.7em, text-align center, width 100%, padding-top 0.2em et padding-bottom 0.4em
+
+Plus tard j'ai fait en sorte sue l'input soit en dehord du div .aSites (ancien ..a) qui contient maintenant aussi le ul. On enlève le align-items center de .links qu'on remplace avec margin-top 3em. Pour .aSites, on met width 7.1em, display flex colum flex start, align-items start. Pour ul on met position relative avec right 50%. Et pour ul quand .sites:checked on rajoute z-index: 10.
+
+Pour le lien vers le mail j'ai plus tard rajouté le mail en dessous. Pour ça on passe le div .menuDefilant à height: 10em. Puis on crée un div .divMail qui contient l'image et le txt précédent (le a passe donc à flex-direction: row et height 9.8em). Ce nouveau div fait 7.8em de haut et est en flex row. En dessou de ce div on met un cite (d'id 'mailVP') qui va contenir l'adresse mail à afficher , il lui done le style font-style normal; text-decoration underline; color #9F3367; font 'Poppins' 1.5em. Enfin on rajoute pour chaque membre dans le script: let mailVP=document.getElementById("mailVP"); . Puis dans update() on passe le textContent au mail en question.
+
+Pour le logo corpo qui apparaît, on rajoute un lien vers la page corpo.php, mtn c'est donc le a qui fait l'animation et plus l'image.
