@@ -1,0 +1,5 @@
+pour le head et le header on reprend exactement la même chose que pour la page home (à part que la classe .page est mainteannt sur corpo.php)
+Le footer est aussi le même sans les parts.
+
+  Pour la première partie (intro) on fait le même style que pour la page home. Le h1 a un width de 26.2em et le texte a un width de 80% avec position relative en left 10%. Comme ça il est centré. Certains mots clés sont mis en span (mêmes propriétés que précédemment).
+
