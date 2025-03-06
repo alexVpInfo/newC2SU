@@ -145,3 +145,13 @@ Pour rendre responsive à un tel:
 		}
 	}
 }
+
+@media screen and (max-width: 1024px) and (min-width: 767px) {
+	.lutteImg {
+		width: 55%;
+		position: ;
+		left: 0%;
+		display: flex;
+		justify-content: flex-start;
+	}
+}
