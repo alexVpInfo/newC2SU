@@ -1,5 +1,16 @@
 pour le head et le header on reprend exactement la même chose que pour la page home (à part que la classe .page est mainteannt sur corpo.php)
 Le footer est aussi le même sans les parts.
 
-  Pour la première partie (intro) on fait le même style que pour la page home. Le h1 a un width de 26.2em et le texte a un width de 80% avec position relative en left 10%. Comme ça il est centré. Certains mots clés sont mis en span (mêmes propriétés que précédemment).
+  Pour la première partie (intro) on fait le même style que pour la page home, avec ici flex wrap en reverse-wrap et margin-bottom 10em. Le h1 a un width de 26.2em et le texte a un width de 80% avec position relative en left 10%. Comme ça il est centré. Certains mots clés sont mis en span (mêmes propriétés que précédemment). l'image un a width de clamp(35em,40vw,55em), height auto et margin-top: 20%. on rajoute pourdiv un width de 45% (à changer plus tard pour rendre responsive)
+plus tard j'ai mis le BR après le bureau pour mettre en dessous la présentation des 4 membres du BR
 
+ensuite pour le bureau on reprend la même disposition aux différences: le txt et img sont inversés (et donc flex-wrap devient wrap), h1 fait width 5em, pour l'image on met le trombi bureau et en dessous on remet le même lien que home pour voir les pôles. On change cependant: pour img, on a margin-top 5%, pour a on met top: clamp(22%, 8,5vw, 25%). linkPoles (le div) est mis en display flex column pour aligner les items et les centrer (align-items: center).
+
+Pour continuer on fait la partie réglement et organisation sur le même modèle toujours. Avec les ajustements suivants: h1 a un width de 13.5em; pour les images on va mette des liens vers les docs. Donc on affiche les premières pages dans un lien a class="doc". href va chercher dans le dossier doc direct dans le dossier principal c2su. .reglementImg a un height de 100%, en flex column space-around items center. Dans ce div le texte en p est en text-align: center; color #9F3367; text-indent 0; width auto; position relative; left 0; font-size 0; padding-top 1em. Cela permet de le centrer.
+Les liens a ont un height de 25em et un width de 17.81em, en position relative. Les images ont un border de 0.2em #9F3367 solid; et un border-radius de 3em. height et width sont à 98%, leur margin est 0. On rajoute object-fit: cover.
+Enfin on crée le filtre qui s'affiche en :hover. on le crée donc avec: position absolute; top 0; left 0; display flex; align-items center; justify-content center; font-size 1.5em; font-family 'Poppins'; color white; background-color rgba(0,0,0,0); width 100%; heigth 99%; border-radius 2em; transition background-color 350ms ease. Et quand .doc est en :hoiver, .filtre devient background-color rgba(0,0,0, 0.6).
+
+Avant de passer au reste de cette page j'ai changé le div 45% de plus haut. Déjà, j'ai mis les img en margin-top de 10% (au lieu de 20%), puis j'ai donnée des width spécofique pour chaque div, afin de rendre la page plus responsive:
+-bureauTxt: width 43em        linkPoles: width 45.7em
+-brTxt: width 43em       brImg: width 45.7em; display flex; justify-content center, align-items center
+-reglementTxt: width 43em        reglementImg: width: 45em
