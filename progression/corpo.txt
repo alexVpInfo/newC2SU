@@ -14,3 +14,7 @@ Avant de passer au reste de cette page j'ai changé le div 45% de plus haut. Dé
 -bureauTxt: width 43em        linkPoles: width 45.7em
 -brTxt: width 43em       brImg: width 45.7em; display flex; justify-content center, align-items center
 -reglementTxt: width 43em        reglementImg: width: 45em
+
+C'est ensuite que j'ai créé le mode nuit (présent aussi sur les autre pages comme home.php). J'ai créé un button à droite des liens vers les sites avec l'id et la class nuit, et contient le texte &#x1F319 (une lune). On crée un scrip js qui récupère son id. Une variable nuit initaliament à 0 passe à 1 quand on click (et repasse à 0 quand on reclick). quand nuit est à 0 le body possède la class modeNuit, et on la retire si on est repasse en mode jour. EN mode nuit la lune devient un soleil (&#x2600;).
+EN style, Le bouton n'a pas de background ou de border, font-size est à 2em avec un padding-bottom de 2em et une couleur jaune.
+la classe modeNuit met un background en #3C3C3C. pour les balise p et li; les class .sites et .VP on met color: white !important, on précise pour li le background #3C3C3C
