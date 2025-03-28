@@ -1,0 +1,1 @@
+on crée des sous dossiers 'poles' dans php et css pour chaque page. , chaque lien se fera donc avec un ../ de plus. 
