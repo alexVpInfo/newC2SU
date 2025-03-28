@@ -19,3 +19,6 @@ C'est ensuite que j'ai créé le mode nuit (présent aussi sur les autre pages c
 EN style, Le bouton n'a pas de background ou de border, font-size est à 2em avec un width de 2em, un padding-bottom de 2em et une couleur jaune.
 la classe modeNuit met un background en #3C3C3C. pour les balise p et li; les class .sites et .VP on met color: white !important, on précise pour li le background #3C3C3C
 on créée ensuite une variable $_SESSION['nuit'] qui sera affectée initialement à nuit dans le code js. (si elle est pas définie en début de page elle vaut 0). on crée deux fichiers php: nuit0.php et nuit0.php qui contiennent uniquement session_start() et qui affectent à session nuit 0 ou 1. Ensuite dans le code js de chaque page pour le mode nuit, on met fecth('nuit1.php') ou l'autre selon la valeur mise. Cela permet maintenant que l'état light/dark se conserve d'une page à l'autre
+
+pour rende la page plus responsive on remet les mêmes options que précédemmeent pour la barre du haut pour les téléphones.
+Pour tous les supports avec max-width 1024px, tout ce qui est Txt et Img (+ .linkPoles) a l'attribut width: 90% !important
