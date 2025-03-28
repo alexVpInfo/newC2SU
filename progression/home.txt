@@ -155,3 +155,8 @@ Pour rendre responsive à un tel:
 		justify-content: flex-start;
 	}
 }
+
+Afin de faciliter l'actualisation du site à chaque changement de bureau, j'ai créé le table 'Bureau' dans la DB 'users'. On y retrouve 17 lignes avec à chaque fois une id entre 0 et 16, le Prénom NOM de la personne, son poste, son mail de la corpo et le lien vers le dossier contenant sa photo.
+On importe ensuite en php cette table en appelant d'abord le fichier 'manageUsers.php' avec include_once. on fait un appel sql avec prepare('SELECT * FROM users.Bureau'), on exécute et on crée $bureau=$bureauStatement->fetchAll();
+On crée maintenant l'array correspondant avec js: const bureauArray=<?php echo json_encode($bureau);?>
+De là, update(i) se simplifie énormément: à chaque fois on appelle simplement bureauArray[i]['propriété concernée'], pour le lien on fait 'mailto:'.concat(bureauArray[i]['mail'])
