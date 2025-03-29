@@ -1,1 +1,23 @@
 on crée des sous dossiers 'poles' dans php et css pour chaque page. , chaque lien se fera donc avec un ../ de plus. 
+On reprend les mêmes header et footer que d'habitude, en adaptant les liens et en mettant la page courante sur pôles.
+
+Dans le main on met un div .title où il y aura en h1 'Le pôle SCOP' avec les mêmes caractéristiques que d'habitude + h1 width: 14vw.
+Ce div est en flex column justify-content: center. On met en dessous le logo de la scop en width 25vw; height auto; margin auto;
+on espace le titre et l'image de 2em. pour l'image on met un margin-bottom de 5em
+
+On crée ensuite un div .pres avec un sousdiv Txt et un autre Img. Le Texte contient un titre et deux paragrapĥes classiques comme dans les autres pages. Dans img on reprend la disposition de la page corpo pur les membres du bureau et afficher le VP SCOP
+
+Pour continuer on fait un div event avec trois sous div pour chaque activité: karaoke, openmic et concert. Avant ce div on met un h1 qui annonce les événements qu'on spécifie avec width: 28.5vw et position relative; left: 28%
+Pour chaque div on commence par une image, dans l'ordre: un micro, une guitare et des notes de musiques. avec la classe .doodle
+on les met avec height 10vw, width: auto et margin-left 7em. en :hover on active l'animation rebond de 0.6s en ease-in-out où à 0% et 100% transform: translateY(0) et à 60% on a transform: translateY(-30px), ça fait un rebond
+EN dessous de l'image un p en span qui annonce l'event, sans text-indent et avec text-center, et en dessous n paragraphe en p.
+.event est en margin-top: 4em, display:flex, flex-direction: row, flex-wrap: wrap, justify-content: space-around.
+Le sous div ont un width de 30%, display flex en column et align-items center
+
+Pour finir on crée le div .contact en display flex column space around, align-items center. avec un margin-bottom de 10em
+en premier dedans on met un h1 où l'on ne spécifie pas la largeur, puis un paragraphe de width 30% en position relative left 0 
+en desous on met le lien vers le facebook de la scop (target="blank_")  et le mailto: scop. L'image sont les mêmes logos que sur home.php, on reprend le même style: display: block, width: 4em, height: 4em, border: 2px #9F3367, border-radius: 25em.
+Ces liens sont dans un div .reseaux en flex row space-between de largeur 13%
+
+Pour rendre le tout responsive, pour les téléphones on commence par reprendre les mêmes modifications que précédemment pour le header.
+ensuite, pour .event et .presTxt le div passe à width de 60%; h1 a un width de 35% !important ; .logo width de 80% et height auto; et pour les p width passe à 60%.
