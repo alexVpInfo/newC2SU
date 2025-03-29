@@ -20,4 +20,4 @@ en desous on met le lien vers le facebook de la scop (target="blank_")  et le ma
 Ces liens sont dans un div .reseaux en flex row space-between de largeur 13%
 
 Pour rendre le tout responsive, pour les téléphones on commence par reprendre les mêmes modifications que précédemment pour le header.
-ensuite, pour .event et .presTxt le div passe à width de 60%; h1 a un width de 35% !important ; .logo width de 80% et height auto; et pour les p width passe à 60%.
+ensuite, pour .event et .presTxt le div passe à width de 60%; h1 a un width de 35% !important ; .logo width de 80% et height auto; pour le h1 seul on enlève ses margin, et pour les p width passe à 60%.
